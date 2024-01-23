@@ -1,0 +1,10 @@
+<Project>
+  <PropertyGroup>
+    <Product>Adriva Simple OData Client</Product>
+    <Copyright>© Adriva LLC, Vagif Abilov and contributors 2012-2024</Copyright>
+    <Description>OData client library for .NET Standard, .NET Core, iOS and Android.</Description>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <Nullable>disable</Nullable>
+    <NoWarn>CS1591;CS1572;CS1573;CS1712;CS1584;CS1570;</NoWarn>
+   </PropertyGroup>
+</Project>

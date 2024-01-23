@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<id>Adriva.Simple.OData.Client</id>
+		<authors>Adriva LLC.</authors>
+		<version>7.0.1</version>
+		<owners>Adriva LLC.</owners>
+		<description>
+			A clone of Simple.OData.Client library originally implemented by Vagif Abilov.
+
+			Simple.OData.Client is a multi-platform OData client library supporting .NET 4.x, .NET Standard, .NET Core, iOS and Android. The adapter provides a great alternative to WCF Data Services client. It does not require generation of context or entity classes and fits RESTful nature of OData services.
+			The package Simple.OData.Client contains libraries that can work with OData feeds that implement both V1-3 and V4 OData protocol.
+			Packages Simple.OData.V3.Client and Simple.OData.V4.Client have smaller footprints and target V1-3 and V4 respectively.
+		</description>
+		<summary>
+			A clone of Simple.OData.Client library originally implemented by Vagif Abilov.
+			Simple.OData.Client is a multi-platform OData client library supporting .NET 4.x, .NET Standard, .NET Core, iOS and Android. The adapter provides a great alternative to WCF Data Services client. It does not require generation of context or entity classes and fits RESTful nature of OData services.
+			The package Simple.OData.Client contains libraries that can work with OData feeds that implement both V1-3 and V4 OData protocol.
+			Packages Simple.OData.V3.Client and Simple.OData.V4.Client have smaller footprints and target V1-3 and V4 respectively.
+		</summary>
+		<license type="expression">MIT</license>
+		<copyright>Copyright 2024 Adriva LLC., 2012-2022 Vagif Abilov and contributors</copyright>
+		<language>en-us</language>
+		<tags>odata data rest client netstandard netcore</tags>
+		<dependencies>
+			<group targetFramework="netstandard2.0">
+				<dependency id="Microsoft.Data.OData" version="[5.8.5,6)" />
+				<dependency id="Microsoft.OData.Core" version="[7.9.4,8)" />
+			</group>
+		</dependencies>
+	</metadata>
+	<files>
+		<!-- NETSTANDARD2.0 -->
+		<file src="src\Simple.OData.Client.Core\bin\Release\netstandard2.0\Simple.OData.Client.Core.dll" target="lib\netstandard2.0\Simple.OData.Client.Core.dll" />
+		<file src="src\Simple.OData.Client.Core\bin\Release\netstandard2.0\Simple.OData.Client.Core.pdb" target="lib\netstandard2.0\Simple.OData.Client.Core.pdb" />
+		<file src="src\Simple.OData.Client.Core\bin\Release\netstandard2.0\Simple.OData.Client.Core.xml" target="lib\netstandard2.0\Simple.OData.Client.Core.xml" />
+
+		<file src="src\Simple.OData.Client.Dynamic\bin\Release\netstandard2.0\Simple.OData.Client.Dynamic.dll" target="lib\netstandard2.0\Simple.OData.Client.Dynamic.dll" />
+		<file src="src\Simple.OData.Client.Dynamic\bin\Release\netstandard2.0\Simple.OData.Client.Dynamic.pdb" target="lib\netstandard2.0\Simple.OData.Client.Dynamic.pdb" />
+		<file src="src\Simple.OData.Client.Dynamic\bin\Release\netstandard2.0\Simple.OData.Client.Dynamic.xml" target="lib\netstandard2.0\Simple.OData.Client.Dynamic.xml" />
+
+		<file src="src\Simple.OData.Client.V3.Adapter\bin\Release\netstandard2.0\Simple.OData.Client.V3.Adapter.dll" target="lib\netstandard2.0\Simple.OData.Client.V3.Adapter.dll" />
+		<file src="src\Simple.OData.Client.V3.Adapter\bin\Release\netstandard2.0\Simple.OData.Client.V3.Adapter.pdb" target="lib\netstandard2.0\Simple.OData.Client.V3.Adapter.pdb" />
+
+		<file src="src\Simple.OData.Client.V4.Adapter\bin\Release\netstandard2.0\Simple.OData.Client.V4.Adapter.dll" target="lib\netstandard2.0\Simple.OData.Client.V4.Adapter.dll" />
+		<file src="src\Simple.OData.Client.V4.Adapter\bin\Release\netstandard2.0\Simple.OData.Client.V4.Adapter.pdb" target="lib\netstandard2.0\Simple.OData.Client.V4.Adapter.pdb" />
+	</files>
+</package>

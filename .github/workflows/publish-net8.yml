@@ -1,0 +1,32 @@
+name: .NET Core
+
+on: [push] 
+
+env:
+  NUGET_KEY: ${{ secrets.NUGET_API_KEY }}
+  PACKAGE_VERSION_PREFIX: 7
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET Core 8
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: |
+          8.0.x
+    - name: Restore Dependencies
+      run: dotnet restore
+    # - name: Build with dotnet
+    #   run: dotnet build ./Framework.sln --configuration Release
+    - name: Create NuGet Packages
+      run: |
+        echo "Packing..."
+        ./nugetpack.sh
+    - name: Push Packages
+      run:  |
+        echo "Pushing packages to Nuget"
+        dotnet nuget push "./package/Adriva.Simple.OData.Client.8*.nupkg" --api-key $NUGET_KEY --source https://api.nuget.org/v3/index.json --skip-duplicate
